@@ -3,6 +3,16 @@
 requires = ["setuptools>=46.1.0", "setuptools_scm[toml]>=5"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "mkt_analyzer"
+readme = "README.md"
+license = {file="LICENSE"}
+requires-python = ">=3.10"
+dynamic = ["version"]
+
+[project.entry-points."console_scripts"]
+mkt_analyzer = "mkt_analyzer._cli:run"
+
 [tool.setuptools_scm]
 # For smarter version schemes and other configuration options,
 # check out https://github.com/pypa/setuptools_scm
